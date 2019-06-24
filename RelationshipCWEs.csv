@@ -1,0 +1,121 @@
+﻿Id,Name,Abstract,Structure,Description
+CWE-943,Improper Neutralization of Special Elements in Data Query Logic,Class,Simple,"The application generates a query intended to access or manipulate data in a data store such as a database, but it does not neutralize or incorrectly neutralizes special elements that can modify the intended logic of the query."
+CWE-564,SQL Injection: Hibernate,Variant,Simple,Using Hibernate to execute a dynamic SQL statement built with user-controlled input can allow an attacker to modify the statement's meaning or to execute arbitrary SQL commands.
+CWE-456,Missing Initialization of a Variable,Variant,Simple,"The software does not initialize critical variables, which causes the execution environment to use unexpected values."
+CWE-74,Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection'),Class,Simple,"The software constructs all or part of a command, data structure, or record using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify how it is parsed or interpreted when it is sent to a downstream component."
+CWE-1019,Validate Inputs,,,Category
+CWE-77,Improper Neutralization of Special Elements used in a Command ('Command Injection'),Class,Simple,"The software constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component."
+CWE-88,Argument Injection or Modification,Base,Simple,"The software does not sufficiently delimit the arguments being passed to a component in another control sphere, allowing alternate arguments to be provided, leading to potentially security-relevant changes."
+CWE-184,Incomplete Blacklist,Base,Simple,"An application uses a ""blacklist"" of prohibited values, but the blacklist is incomplete."
+CWE-119,Improper Restriction of Operations within the Bounds of a Memory Buffer,Class,Simple,"The software performs operations on a memory buffer, but it can read from or write to a memory location that is outside of the intended boundary of the buffer."
+CWE-20,Improper Input Validation,Class,Simple,The product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.
+CWE-785,Use of Path Manipulation Function without Maximum-sized Buffer,Variant,Simple,"The software invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."
+CWE-170,Improper Null Termination,Base,Simple,The software does not terminate or incorrectly terminates a string or array with a null character or equivalent terminator.
+CWE-231,Improper Handling of Extra Values,Variant,Simple,The software does not handle or incorrectly handles when more values are provided than expected.
+CWE-416,Use After Free,Variant,Simple,"Referencing memory after it has been freed can cause a program to crash, use unexpected values, or execute code."
+CWE-123,Write-what-where Condition,Base,Simple,"Any condition where the attacker has the ability to write an arbitrary value to an arbitrary location, often as the result of a buffer overflow."
+CWE-80,Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS),Variant,Simple,"The software receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters such as ""<"", "">"", and ""&"" that could be interpreted as web-scripting elements when they are sent to a downstream component that processes web pages."
+CWE-81,Improper Neutralization of Script in an Error Message Web Page,Variant,Simple,"The software receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters that could be interpreted as web-scripting elements when they are sent to an error page."
+CWE-83,Improper Neutralization of Script in Attributes in a Web Page,Variant,Simple,"The software does not neutralize or incorrectly neutralizes ""javascript:"" or other URIs from dangerous attributes within tags, such as onmouseover, onload, onerror, or style."
+CWE-84,Improper Neutralization of Encoded URI Schemes in a Web Page,Variant,Simple,The web application improperly neutralizes user-controlled input for executable script disguised with URI encodings.
+CWE-85,Doubled Character XSS Manipulations,Variant,Simple,The web application does not filter user-controlled input for executable script disguised using doubling of the involved characters.
+CWE-86,Improper Neutralization of Invalid Characters in Identifiers in Web Pages,Variant,Simple,"The software does not neutralize or incorrectly neutralizes invalid characters or byte sequences in the middle of tag names, URI schemes, and other identifiers."
+CWE-87,Improper Neutralization of Alternate XSS Syntax,Variant,Simple,The software does not neutralize or incorrectly neutralizes user-controlled input for alternate script syntax.
+CWE-692,Incomplete Blacklist to Cross-Site Scripting,Compound,Chain,"The product uses a blacklist-based protection mechanism to defend against XSS attacks, but the blacklist is incomplete, allowing XSS variants to succeed."
+CWE-352,Cross-Site Request Forgery (CSRF),Compound,Composite,"The web application does not, or can not, sufficiently verify whether a well-formed, valid, consistent request was intentionally provided by the user who submitted the request."
+CWE-494,Download of Code Without Integrity Check,Base,Simple,The product downloads source code or an executable from a remote location and executes the code without sufficiently verifying the origin and integrity of the code.
+CWE-113,Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting'),Base,Simple,"The software receives data from an upstream component, but does not neutralize or incorrectly neutralizes CR and LF characters before the data is included in outgoing HTTP headers."
+CWE-184,Incomplete Blacklist,Base,Simple,"An application uses a ""blacklist"" of prohibited values, but the blacklist is incomplete."
+CWE-442,Web Problems,,,Category
+CWE-287,Improper Authentication,Class,Simple,"When an actor claims to have a given identity, the software does not prove or insufficiently proves that the claim is correct."
+CWE-1010,Authenticate Actors,,,Category
+CWE-285,Improper Authorization,Class,Simple,The software does not perform or incorrectly performs an authorization check when an actor attempts to access a resource or perform an action.
+CWE-425,Direct Request ('Forced Browsing'),Base,Simple,"The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."
+CWE-638,Not Using Complete Mediation,Class,Simple,"The software does not perform access checks on a resource every time the resource is accessed by an entity, which can create resultant weaknesses if that entity's rights or privileges change over time."
+CWE-939,Improper Authorization in Handler for Custom URL Scheme,Base,Simple,"The software uses a handler for a custom URL scheme, but it does not properly restrict which actors can invoke the handler using the scheme."
+CWE-1011,Authorize Actors,,,Category
+CWE-344,Use of Invariant Value in Dynamically Changing Context,Base,Simple,"The product uses a constant value, name, or reference, but this value can (or should) vary across different environments."
+CWE-671,Lack of Administrator Control over Security,Class,Simple,The product uses security features in a way that prevents the product's administrator from tailoring security settings to reflect the environment in which the product is being used. This introduces resultant weaknesses or prevents it from operating at a level of security that is desired by the administrator.
+CWE-287,Improper Authentication,Class,Simple,"When an actor claims to have a given identity, the software does not prove or insufficiently proves that the claim is correct."
+CWE-259,Use of Hard-coded Password,Base,Simple,"The software contains a hard-coded password, which it uses for its own inbound authentication or for outbound communication to external components."
+CWE-321,Use of Hard-coded Cryptographic Key,Base,Simple,The use of a hard-coded cryptographic key significantly increases the possibility that encrypted data may be recovered.
+CWE-257,Storing Passwords in a Recoverable Format,Base,Simple,"The storage of passwords in a recoverable format makes them subject to password reuse attacks by malicious users. In fact, it should be noted that recoverable encrypted passwords provide no significant benefit over plaintext passwords since they are subject not only to reuse by malicious attackers but also by malicious insiders. If a system administrator can recover a password directly, or use a brute force search on the available information, the administrator can use the password on other accounts."
+CWE-255,Credentials Management,,,Category
+CWE-693,Protection Mechanism Failure,Class,Simple,The product does not use or incorrectly uses a protection mechanism that provides sufficient defense against directed attacks against the product.
+CWE-312,Cleartext Storage of Sensitive Information,Base,Simple,The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere.
+CWE-319,Cleartext Transmission of Sensitive Information,Base,Simple,The software transmits sensitive or security-critical data in cleartext in a communication channel that can be sniffed by unauthorized actors.
+CWE-614,Sensitive Cookie in HTTPS Session Without 'Secure' Attribute,Variant,Simple,"The Secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to send those cookies in plaintext over an HTTP session."
+CWE-327,Use of a Broken or Risky Cryptographic Algorithm,Class,Simple,The use of a broken or risky cryptographic algorithm is an unnecessary risk that may result in the exposure of sensitive information.
+CWE-1013,Encrypt Data,,,Category
+CWE-310,Cryptographic Issues,,,Category
+CWE-669,Incorrect Resource Transfer Between Spheres,Class,Simple,"The product does not properly transfer a resource/behavior to another sphere, or improperly imports a resource/behavior from another sphere, in a manner that provides unintended control over that resource."
+CWE-351,Insufficient Type Distinction,Base,Simple,The software does not properly distinguish between different types of elements in a way that leads to insecure behavior.
+CWE-436,Interpretation Conflict,Class,Simple,"Product A handles inputs or steps differently than Product B, which causes A to perform incorrect actions based on its perception of B's state."
+CWE-430,Deployment of Wrong Handler,Base,Simple,"The wrong ""handler"" is assigned to process an object."
+CWE-73,External Control of File Name or Path,Class,Simple,The software allows user input to control or influence paths or file names that are used in filesystem operations.
+CWE-183,Permissive Whitelist,Base,Simple,"An application uses a ""whitelist"" of acceptable values, but the whitelist includes at least one unsafe value, leading to resultant weaknesses."
+CWE-429,Handler Errors,,,Category
+CWE-302,Authentication Bypass by Assumed-Immutable Data,Variant,Simple,"The authentication scheme or implementation uses key data elements that are assumed to be immutable, but can be controlled or modified by the attacker."
+CWE-350,Reliance on Reverse DNS Resolution for a Security-Critical Action,Variant,Simple,"The software performs reverse DNS resolution on an IP address to obtain the hostname and make a security decision, but it does not properly ensure that the IP address is truly associated with the hostname."
+CWE-784,Reliance on Cookies without Validation and Integrity Checking in a Security Decision,Variant,Simple,"The application uses a protection mechanism that relies on the existence or values of a cookie, but it does not properly ensure that the cookie is valid for the associated user."
+CWE-1012,Cross Cutting,,,Category
+CWE-254,7PK - Security Features,,,Category
+CWE-269,Improper Privilege Management,Class,Simple,"The software performs an operation at a privilege level that is higher than the minimum level required, which creates new weaknesses or amplifies the consequences of other weaknesses."
+CWE-657,Violation of Secure Design Principles,Class,Simple,The product violates well-established principles for secure design.
+CWE-1015,Limit Access,,,Category
+CWE-265,Privilege / Sandbox Issues,,,Category
+CWE-345,Insufficient Verification of Data Authenticity,Class,Simple,"The software does not sufficiently verify the origin or authenticity of data, in a way that causes it to accept invalid data."
+CWE-79,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),Base,Simple,The software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.
+CWE-668,Exposure of Resource to Wrong Sphere,Class,Simple,"The product exposes a resource to the wrong control sphere, providing unintended actors with inappropriate access to the resource."
+CWE-706,Use of Incorrectly-Resolved Name or Reference,Class,Simple,"The software uses a name or reference to access a resource, but the name/reference resolves to a resource that is outside of the intended control sphere."
+CWE-23,Relative Path Traversal,Base,Simple,"The software uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as "".."" that can resolve to a location that is outside of that directory."
+CWE-36,Absolute Path Traversal,Base,Simple,"The software uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as ""/abs/path"" that can resolve to a location that is outside of that directory."
+CWE-172,Encoding Error,Class,Simple,"The software does not properly encode or decode the data, resulting in unexpected values."
+CWE-21,Pathname Traversal and Equivalence Errors,,,Category
+CWE-1020,Verify Message Integrity,,,Category
+CWE-490,Mobile Code Issues,,,Category
+CWE-551,Incorrect Behavior Order: Authorization Before Parsing and Canonicalization,Base,Simple,"If a web server does not fully parse requested URLs before it examines them for authorization, it may be possible for an attacker to bypass authorization protection."
+CWE-639,Authorization Bypass Through User-Controlled Key,Base,Simple,The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.
+CWE-647,Use of Non-Canonical URL Paths for Authorization Decisions,Variant,Simple,The software defines policy namespaces and makes authorization decisions based on the assumption that a URL is canonical. This can allow a non-canonical URL to bypass the authorization.
+CWE-804,Guessable CAPTCHA,Base,Simple,"The software uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor."
+CWE-98,Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion'),Variant,Simple,"The PHP application receives input from an upstream component, but it does not restrict or incorrectly restricts the input before its usage in ""require,"" ""include,"" or similar functions."
+CWE-827,Improper Control of Document Type Definition,Variant,Simple,"The software does not restrict a reference to a Document Type Definition (DTD) to the intended control sphere. This might allow attackers to reference arbitrary DTDs, possibly causing the software to expose files, consume excessive system resources, or execute arbitrary http requests on behalf of the attacker."
+CWE-830,Inclusion of Web Functionality from an Untrusted Source,Variant,Simple,"The software includes web functionality (such as a web widget) from another domain, which causes it to operate within the domain of the software, potentially granting total access and control of the software to the untrusted source."
+CWE-1016,Limit Exposure,,,Category
+CWE-276,Incorrect Default Permissions,Base,Simple,"The software, upon installation, sets incorrect permissions for an object that exposes it to an unintended actor."
+CWE-277,Insecure Inherited Permissions,Variant,Simple,A product defines a set of insecure permissions that are inherited by objects that are created by the program.
+CWE-278,Insecure Preserved Inherited Permissions,Variant,Simple,"A product inherits a set of insecure permissions for an object, e.g. when copying from an archive file, without user awareness or involvement."
+CWE-279,Incorrect Execution-Assigned Permissions,Variant,Simple,"While it is executing, the software sets the permissions of an object in a way that violates the intended permissions that have been specified by the user."
+CWE-281,Improper Preservation of Permissions,Base,Simple,"The software does not preserve permissions or incorrectly preserves permissions when copying, restoring, or sharing objects, which can cause them to have less restrictive permissions than intended."
+CWE-689,Permission Race Condition During Resource Copy,Compound,Composite,"The product, while copying or cloning a resource, does not set the resource's permissions or access control until the copy is complete, leaving the resource exposed to other spheres while the copy is taking place."
+CWE-1004,Sensitive Cookie Without 'HttpOnly' Flag,Variant,Simple,"The software uses a cookie to store sensitive information, but the cookie is not marked with the HttpOnly flag."
+CWE-275,Permission Issues,,,Category
+CWE-840,Business Logic Errors,,,Category
+CWE-1177,Use of Prohibited Code,Class,Simple,"The software uses a function, library, or third party component that has been explicitly prohibited, whether by the developer or the customer."
+CWE-328,Reversible One-Way Hash,Base,Simple,"The product uses a hashing algorithm that produces a hash value that can be used to determine the original input, or to find an input that can produce the same hash, more efficiently than brute force techniques."
+CWE-780,Use of RSA Algorithm without OAEP,Variant,Simple,"The software uses the RSA algorithm but does not incorporate Optimal Asymmetric Encryption Padding (OAEP), which might weaken the encryption."
+CWE-916,Use of Password Hash With Insufficient Computational Effort,Base,Simple,"The software generates a hash for a password, but it uses a scheme that does not provide a sufficient level of computational effort that would make password cracking attacks infeasible or expensive."
+CWE-311,Missing Encryption of Sensitive Data,Class,Simple,The software does not encrypt sensitive or critical information before storage or transmission.
+CWE-301,Reflection Attack in an Authentication Protocol,Variant,Simple,Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user.
+CWE-208,Information Exposure Through Timing Discrepancy,Base,Simple,"Two separate operations in a product require different amounts of time to complete, in a way that is observable to an actor and reveals security-relevant information about the state of the product, such as whether a particular operation was successful or not."
+CWE-682,Incorrect Calculation,Class,Simple,The software performs a calculation that generates incorrect or unintended results that are later used in security-critical decisions or resource management.
+CWE-467,Use of sizeof() on a Pointer Type,Variant,Simple,"The code calls sizeof() on a malloced pointer type, which always returns the wordsize/8. This can produce an unexpected result if the programmer intended to determine how much memory has been allocated."
+CWE-779,Improper Control of Interaction Frequency,Class,Simple,"The software does not properly limit the number or frequency of interactions that it has with an actor, such as the number of incoming requests."
+CWE-610,Externally Controlled Reference to a Resource in Another Sphere,Class,Simple,The product uses an externally controlled name or reference that resolves to a resource that is outside of the intended control sphere.
+CWE-133,String Errors,,,Category
+CWE-128,Wrap-around Error,Base,Simple,"Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore ""wraps around"" to a very small, negative, or undefined value."
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
