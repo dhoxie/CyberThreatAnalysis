@@ -1,0 +1,12 @@
+Export a graph.db to GitHub:
+	1. Open file of graph you want to export from Neo4j Desktop 	using the Manage option, then the Open Folder option.
+	2. Go to the data folder, then the databases folder.
+	3. Create a zip of the graph.db folder.
+	4. Upload the zip to GitHub.
+
+Import a graph.db from GitHub:
+	1. Create an empty graph with an appropriate name within 	your desired project in Neo4j Desktop.
+	2. Using the Manage and Open Folder options, open the folder 	of your new graph. Go to the data folder, then the databases 	folder.
+	3. Close the Neo4j Desktop.
+	4. Download the desired graph.db zip file from GitHub. 	Extract the file to the open databases folder. Replace the 	existing graph.db folder with the file from GitHub.
+	5. Restart Neo4j Desktop. The graph.db should have the 	correct information.
