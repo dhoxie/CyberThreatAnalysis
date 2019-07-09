@@ -1,4 +1,4 @@
-# CybersecurityAssociationProject (By: Alejandro Zeno-Miranda and Daylyn Hoxie)
+# CybersecurityREUProject (By: Alejandro Zeno-Miranda and Daylyn Hoxie)
 
 This README file will explain and guide on how to create the graph database we design in our REU internship at 
 Montana State University in cybersecurity.
