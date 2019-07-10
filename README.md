@@ -153,7 +153,7 @@ For loading the .cypher file we don't use the LOAD clause.
 We are looking to pass the information of one database to the other one. First, open the .cypher file that we already obtained and it will open a text file. Second, copy all the text of the file. At last, paste it to the command line of the new database and run it. The time that it takes the process it will depend of the size of the database. When the process is completed it will include the database information to the one new database. As result, we'll have the merge database that we have been working for.
 
 
-End of .cypher loading part.
+End of .cypher loading part
 =
 
 
