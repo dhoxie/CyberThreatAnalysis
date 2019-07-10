@@ -142,7 +142,7 @@ Once the APOC is installed we go to the database settings and writte  "apoc.expo
 This setting page can be found by going to neo4j browser -> "Manage" button of the desired database -> setting. Then go to the database and enter the following command: "CALL apoc.export.cypherAll('/usr/tmp/test1.cypher', {format:'plain'})". If the entered command give an error use this one: "CALL apoc.export.cypherAll('test1.cypher', {format:'plain'})". After this the .cypher file can be found at the "import" folder of the database. 
 
 
-==========================================
+
 STOP! From this part onwards it is required to have both databases created, the database of the CWEs and the database of Attack Tactics and Techniques. Skip this part and go to the "Attack Tactics and Techniques part".
 =
 
@@ -154,7 +154,7 @@ We are looking to pass the information of one database to the other one. First, 
 
 
 End of .cypher loading part.
-==========================================
+=
 
 
 
