@@ -17,7 +17,7 @@ We'll divide this proyect in two part since we worked in differents concepts to 
 
 Let's start:
 
-# Common Weakness Enummeration (CWE) Part
+# Common Weakness Enummeration (CWE)
 
 As mentioned above, we are working with graph databases for this proyect. We used Neo4j and also Cypher query language. 
 For those that are new in this DBMS and Cypher we put the link for a tutorial in the references zip file (recommended). This 
