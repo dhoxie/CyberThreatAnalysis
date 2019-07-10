@@ -108,7 +108,7 @@ WHERE a.id = "CWE-79" AND b.id = "CWE-87" AND c.id = "CWE-80"
 CREATE (a)<-[r1:ParentOf]-(b), (a)<-[r2:ParentOf]-(c)
 RETURN a,b,c
 
-Note: If there are more than two CWEs and relationships and want to put them in one command, just keep adding variables needed. 
+Note: If there are more than two CWEs and relationships and want to put them in one command, just keep adding variables as much as needed. 
 
 
 Now focusing in the "MemberOf" relationship. As we can see in the last commands the direction of the arrows in the las examples was like this (a)<-[]-(b) and not (a)-[]->(b). The reason for that is given to how the relationship is managed. For the relationships with the types of: "ParentOf", "ChildOf", "CanFollow", "CanAlsoBe", "CanPrecede", and "PeerOf" the direction it will be (a)<-[]-(b) but for the "MemberOf" relationship type it will be (a)-[]->(b). This is because the "MemberOf" relationship is a classification to group different CWEs that have certain similarities and the direction of the relationship indicates that certain CWE is part of that clasification.
@@ -128,6 +128,6 @@ WHERE a.id = "CWE-79" AND b.id = "CWE-442" AND c.id = "CWE-1019"
 CREATE (a)-[r1:MemberOf]->(b), (a)-[r2:MembertOf]->(c)
 RETURN a,b,c
 
-Note: If the CWE is part of more clasifications and want to put them in one command, just keep adding variables needed. 
+Note: If the CWE is part of more clasifications and want to put them in one command, just keep adding variables as much as needed. 
 
 
