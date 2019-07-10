@@ -9,28 +9,27 @@ variety of techniques can cause in different Common Weakness Enummeration (CWE).
 The tool used for achieving this is Neo4j graph database management system developed by Neo4j, Inc. and Cypher query language. 
 By creating a graph database we try to find a relationship between the CWEs and Attack Tactics through the impacts generated.
 
-For the purposes of this text there is a folder called "Documentation" that contains everything needed for downloading and
-recreating the proyect. Also, inside the "Documentation" folder there is another folder called "References" with all the links 
-needed for following the explanation. 
+For the purposes of this text there is a zip file for every folder that contains everything needed for downloading and
+recreating the proyect. Also, there is a zip file called "References" with all the links needed for following the explanation. 
 
 We'll divide this proyect in two part since we worked in differents concepts to merge them later. 
 
 
 Let's start:
 
-.Common Weakness Enummeration (CWE) Part
+# Common Weakness Enummeration (CWE) Part
 
 As mentioned above, we are working with graph databases for this proyect. We used Neo4j and also Cypher query language. 
-For those that are new in this DBMS and Cypher we put the link for a tutorial in the references document (recommended). This 
+For those that are new in this DBMS and Cypher we put the link for a tutorial in the references zip file (recommended). This 
 tutorial have a complete description on what is a graph database and a guide on how to set up the neo4j browser. 
 
 The process of creating the database was very complex due to the humongous quantity of CWEs (hundreds surpassing the thousand) 
 and Attack Tactics existing. Thanks to this factor, we decided to only work with the top 25 most dangerous software errors. In 
 other words, the top 25 CWEs, but even with the top 25 CWEs, the work of creating the database was very extensive. After some 
 research we found that Neo4j have the capability of loading csv files. Knowing this, we proceded to create excel files for 
-later converting them to csv files and load them into neo4j. Note: This excel and csv files can be found in the "csv Files" and "Excel Files" folders inside the "Documentation" folder.
+later converting them to csv files and load them into neo4j. Note: This excel and csv files can be found in the "csv Files" and "Excel Files" folders zip files.
 
-This csv files need to be copied at the "import" folder of the database for achieving the load process. This folder can be found by going to the neo4j browser -> pressing the "manage" button of the desired database -> Open Folder -> Import. 
+This csv files need to be copied at the "import" folder of the database for achieving the load process. This folder can be found by going to the neo4j browser -> pressing the "Manage" button of the desired database -> Open Folder -> Import. 
 
 
 For loading the CWEs csv file we used the LOAD clause and the following command:
@@ -60,7 +59,7 @@ Having deleted the non-existing nodes, we continue to create relationships, but 
 
 Having said this, break down the relationships and creating them is our objective at this moment. As we already mentioned, we are working only with the top 25 CWEs. The Mitre site have a complete description of the top 25 CWEs including the relationships they have with other CWEs. For this proyect we only used the first generation (if we can call it like that) due to time limitations. We created another Excel file with all the information of the other CWEs that the top 25 CWEs are related to and then convert it to a csv file. As we did with the CWEs csv file, we put the Relationships csv file in the "import" file of the database we're already working with. 
 
-Note: This excel and csv files can be found in the "csv Files" and "Excel Files" folders located at the "Documentation" folder.
+Note: This excel and csv files can be found in the "csv Files" and "Excel Files" folders zip files.
 
 
 For loading the relationships csv we used the follwing command: 
@@ -131,3 +130,55 @@ RETURN a,b,c
 Note: If the CWE is part of more clasifications and want to put them in one command, just keep adding variables as much as needed. 
 
 
+At this point of the guide we already have created the CWE database entirely. Now we are going to work with the backup, the exportation and importation of the database, and merging the CWE database with the Attack Tactics database. First, let's work with the backup part. For obtaining the backup folder we must find the "graph.db" folder in the database data located at the neo4j browser. For achieving this follow this path. neo4j browser -> press the "Manage" button of the desired database -> Open Folder -> data -> databases. Once there copy the "graph.db" folder in a safe place. With that folder it can recreate the same database if is copied in the "databases" folder of another empty database. 
+
+Note: There is txt file with the instruction for exporting-importing the database. This file is located in the "Export-Import Database" zip file.
+
+
+Now that we got the database backup we'll procede to the merging part. For merging the database we need the .cypher file that we obtain by entering a command in the database, but first is needed to download the APOC configuration and restarting the database (if is started). For downloading the APOC settings go to neo4j browser -> "Manage" button of the desired database -> Plugins -> Install APOC. 
+
+
+Once the APOC is installed we go to the database settings and writte  "apoc.export.file.enabled=true" at the end of the code. 
+This setting page can be found by going to neo4j browser -> "Manage" button of the desired database -> setting. Then go to the database and enter the following command: "CALL apoc.export.cypherAll('/usr/tmp/test1.cypher', {format:'plain'})". If the entered command give an error use this one: "CALL apoc.export.cypherAll('test1.cypher', {format:'plain'})". After this the .cypher file can be found at the "import" folder of the database. 
+
+
+==============================================================================================================================STOP! From this part onwards it is required to have both databases created, the database of the CWEs and the database of Attack Tactics and Techniques. Skip this part and go to the "Attack Tactics and Techniques part".
+==============================================================================================================================
+
+Note: Make sure to create a new database for creating the merged one. Put the backup of the CWE database or the Attack Tactics and Techniques database in the new database and then load the .cypher file into that database. Also, copy the backup folder ("graph.db" folder) of that database since it will be a new one. 
+
+For loading the .cypher file we don't use the LOAD clause. 
+
+We are looking to pass the information of one database to the other one. First, open the .cypher file that we already obtained and it will open a text file. Second, copy all the text of the file. At last, paste it to the command line of the new database and run it. The time that it takes the process it will depend of the size of the database. When the process is completed it will include the database information to the one new database. As result, we'll have the merge database that we have been working for.
+
+==============================================================================================================================End of .cypher loading part.
+==============================================================================================================================
+
+
+
+
+
+# Attack Tactics and Techniques
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==============================================================================================================================Futere Plans
+==============================================================================================================================
