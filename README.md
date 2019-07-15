@@ -17,6 +17,21 @@ We'll divide this proyect in two part since we worked in differents concepts to 
 
 Let's start:
 
+
+(Quick start)
+# Download Full Database:
+
+1. Download FullDB.zip and unzip file.
+
+2. Open Neo4j and create a new graph in the project of your choice.
+
+3. Manage the new graph and Open Folder.  Within the folder, go to the data folder, and then the databases folder.
+
+4. Delete the graph.db file from here and place the unzipped graph.db file here.
+
+5. Restart the graph.  Now the graph should have all the information from the database.
+
+
 # Common Weakness Enummeration (CWE)
 
 As mentioned above, we are working with graph databases for this proyect. We used Neo4j and also Cypher query language. 
@@ -178,10 +193,6 @@ End of .cypher loading part
 
 
 
-
-
-
-
 ==========================================
-Futere Plans
+Future Plans
 ==========================================
