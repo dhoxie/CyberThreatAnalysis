@@ -14,7 +14,7 @@ Let's start:
 (Quick start)
 # To Download the Full Database:
 
-1. Download FullDB.zip and unzip file.
+1. Download DatabasesBackup.zip and unzip file.
 
 2. Open Neo4j and create a new graph in the project of your choice.
 
