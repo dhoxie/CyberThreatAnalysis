@@ -190,4 +190,4 @@ Let's start:
  =
 
 1) Import the database to Cytoscape for better vizualitation.
-2) Work with Java JAR files for integrating queries from Java to neo4j
+2) Work with Java JAR files for integrating queries from Java to neo4j.
