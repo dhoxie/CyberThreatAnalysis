@@ -1,4 +1,4 @@
-#CyberThreatAnalysis
+# CyberThreatAnalysis
 A Neo4j Graph Database [1] associating the ATT&CK Enterprise Matrix with the CWE/SANS Top 25 Most Common CWEs.
 
 This threat analysis project connects all 12 tactics and 244 techniques from MITRE's ATT&CK Enterprise Matrix [2] with the CWE/SANS Top 25 Most Common CWEs [3].  ATT&CK tactics were associated with technical impacts using Izurieta and Prouty's mapping [4].
@@ -11,7 +11,7 @@ The mapping of attack tactics to weaknesses within a graph database provides eas
 
 
 
-#Quickstart
+## Quickstart
 
 1. Download, install, and start Neo4j Desktop.
 
@@ -27,7 +27,7 @@ The mapping of attack tactics to weaknesses within a graph database provides eas
 
 
 
-#References
+## References
 
 [1] Neo4j Graph Platform. Neo4j Inc., 2019, https://neo4j.com.
 
