@@ -9,7 +9,7 @@ Connections between the Top 25 CWEs and their related CWEs were also created usi
 
 The mapping of attack tactics to weaknesses within a graph database provides easy interpretation of these relationships from both developer and operational responder (SecDevOps) perspectives.
 
-
+**Daylyn Hoxie and Alejandro Zeno-Miranda**
 
 ## Quickstart
 
